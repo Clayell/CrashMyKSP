@@ -101,3 +101,4 @@ using System.Reflection;
 [assembly: AssemblyVersion("<#= major #>.0.0.0")] // only the major version gets changed
 [assembly: AssemblyFileVersion("<#= major #>.<#= minor #>.<#= patch #>.<#= build #>")]
 [assembly: KSPAssembly("CrashMyKSP", <#= major #>, <#= minor #>, <#= patch #>)]
+[assembly: KSPAssemblyDependency("ToolbarController", 1, 0)]

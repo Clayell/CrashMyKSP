@@ -47,6 +47,7 @@
     <Reference Include="$(KSPRoot)\KSP_x64_Data\Managed\UnityEngine.InputLegacyModule.dll" />
     <Reference Include="$(KSPRoot)\KSP_x64_Data\Managed\UnityEngine.UI.dll" />
     <Reference Include="$(KSPRoot)\KSP_x64_Data\Managed\UnityEngine.TextRenderingModule.dll" />
+    <Reference Include="$(KSPRoot)\GameData\001_ToolbarControl\Plugins\ToolbarControl.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyVersion.cs">
@@ -54,6 +55,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyVersion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Source\CrashMyKSP.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GameData\CrashMyKSP\CrashMyKSP.version" />
@@ -62,6 +64,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssemblyVersion.cs</LastGenOutput>
     </None>
+	<None Include="GameData\CrashMyKSP\PluginData\ToolbarIcons\button-24.png" />
+	<None Include="GameData\CrashMyKSP\PluginData\ToolbarIcons\button-64.png" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GameData\CrashMyKSP\Plugins\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
