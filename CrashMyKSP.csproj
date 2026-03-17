@@ -64,9 +64,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssemblyVersion.cs</LastGenOutput>
     </None>
-	<None Include="GameData\CrashMyKSP\PluginData\ToolbarIcons\button-24.png" />
-	<None Include="GameData\CrashMyKSP\PluginData\ToolbarIcons\button-64.png" />
+    <None Include="GameData\CrashMyKSP\PluginData\ToolbarIcons\button-24.png" />
+    <None Include="GameData\CrashMyKSP\PluginData\ToolbarIcons\button-64.png" />
     <None Include="README.md" />
+	<None Include="git-scripts\zip.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -87,6 +88,9 @@
   </PropertyGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="&quot;$(ProgramFiles)\Microsoft Visual Studio\2022\Community\Common7\IDE\TextTransform.exe&quot; &quot;$(ProjectDir)Properties\AssemblyVersion.tt&quot;" />
+  </Target>
+  <Target Name="ZipGameData" AfterTargets="Build">
+      <Exec Command="powershell -ExecutionPolicy Bypass -File .git\zip.ps1" WorkingDirectory="$(ProjectDir)" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
