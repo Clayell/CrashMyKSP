@@ -31,7 +31,7 @@ namespace CrashMyKSP
             {
                 toolbarControl = gameObject.AddComponent<ToolbarControl>();
                 toolbarControl.AddToAllToolbars(ToggleWindow, ToggleWindow,
-                    ApplicationLauncher.AppScenes.ALWAYS & ~ApplicationLauncher.AppScenes.MAINMENU, // all but main menu
+                    ApplicationLauncher.AppScenes.ALWAYS,
                     "CrashMyKSP",
                     "CrashMyKSP_Button",
                     "CrashMyKSP/PluginData/ToolbarIcons/button-64",
