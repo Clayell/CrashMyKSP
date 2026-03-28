@@ -51,6 +51,12 @@ namespace CrashMyKSP
             InitToolbar();
         }
 
+        void OnDestroy()
+        {
+            Destroy(toolbarControl);
+            toolbarControl = null;
+        }
+
         private void ToggleWindow() => isWindowOpen = !isWindowOpen;
 
         void OnGUI()
